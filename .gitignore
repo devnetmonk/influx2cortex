@@ -7,3 +7,4 @@ vendor/
 .drone/ghcomment
 .tag
 .tags
+.vscode
