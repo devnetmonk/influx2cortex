@@ -1,16 +1,9 @@
 version: "2.2"
-networks:
-  netmonk:
-    external: true
 
 services:
   service-influx2cortex:
     privileged: true
     image: ketitik/influx2cortex 
-    networks:
-      netmonk:
-        aliases:
-          - netmonk-influx2cortex
     environment:
      - WRITE_ENDPOINT=${WRITE_ENDPOINT}
      - AUTH_ENABLE=true
@@ -19,8 +12,4 @@ services:
     ports:
       - "8007:8007"
     restart: always
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "5"
+    

@@ -1,8 +1,5 @@
 FROM alpine:3.7
 
-# Maintainer
-LABEL com.ketitik.netmonk.image.authors="developer@ketitik.com"
-
 # Working Directory
 WORKDIR /home/influx2cortex
 
